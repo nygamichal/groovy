@@ -17,6 +17,8 @@ println "======Define list======="
 def list = ["el1","el2",variable]
 //HINT: Not using quotas "" will show variable.
 println list
+println "======Each======="
+list.each{element -> println element}
 
 
 //Define map
@@ -24,6 +26,8 @@ println ""
 println "======Define map======="
 def map = ["el1":1,"el2":2]
 println map
+println "======Each======="
+map.each{key, value -> println value.collect{key}.join(',')}
 
 
 //Define function
@@ -61,3 +65,34 @@ else
 {
 println "Ouch, someone does not like rabbits here."
 }
+
+
+//Boolean algebra
+println ""
+println "======Boolean algebra======="
+if(favoriteAnimals.contains("snake") && text.contains("Anyone"))
+{
+println "PASS - Both true."
+}
+else
+{
+println "FAIL - Unfortunatly, there is at least one false."
+}
+
+if(favoriteAnimals.contains("snak") || text.contains("Anyone"))
+{
+println "PASS - At least one of them is true."
+}
+else
+{
+println "FAIL - Unfortunatly, both of them are false."
+}
+
+//Loop while
+println ""
+println "======Loop while======="
+/*while()
+{
+
+}
+*/
